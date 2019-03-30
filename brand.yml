@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active:
+    - dev # 默认使用环境是 dev
+---
+server:
+  port: 8001 # 服务提供者提供服务的端口
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/javastudy_aigou
+    username: root
+    password: 123456
+  application:
+    name: BRAND-PROVIDER # 服务名，注意大写，中间一定不能有"下划线"
+  profiles: dev # 默认环境
+mybatis-plus:
+  type-aliases-package: aigou.domain #别名
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ # Eureka 服务注册中心的服务地址
+---
+server:
+  port: 8001 # 服务提供者提供服务的端口
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/javastudy_aigou
+    username: root
+    password: 123456
+  application:
+    name: UBRAND-PROVIDER # 服务名，注意大写，中间一定不能有"下划线"
+  profiles: test # 测试环境
+mybatis-plus:
+  type-aliases-package: aigou.domain,aigou.query #别名
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ # Eureka 服务注册中心的服务地址
