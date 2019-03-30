@@ -15,6 +15,7 @@ spring:
     name: BRAND-PROVIDER # 服务名，注意大写，中间一定不能有"下划线"
   profiles: dev # 默认环境
 mybatis-plus:
+  mapper-locations: classpath:aigou/mapper/*Mapper.xml
   type-aliases-package: aigou.domain #别名
 eureka:
   client:
@@ -33,7 +34,8 @@ spring:
     name: UBRAND-PROVIDER # 服务名，注意大写，中间一定不能有"下划线"
   profiles: test # 测试环境
 mybatis-plus:
-  type-aliases-package: aigou.domain,aigou.query #别名
+  mapper-locations: classpath:aigou/mapper/*Mapper.xml
+  type-aliases-package: aigou.domain #别名
 eureka:
   client:
     service-url:
