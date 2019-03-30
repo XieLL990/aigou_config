@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active:
+    - dev # 默认使用环境是 dev
+---
+server:
+  port: 9527 # 服务提供者提供服务的端口
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+zuul:
+  ignored-services: '*' # 忽略所有的服务，意思除了通过使用路由方式，直接调用服务的方式将被无视
+  prefix: '/aigou' # 前缀，统一一个项目的路径，更规范
+  routes:
+    xl.serviceId: brand-provider
+    xl.path: /brand/**  # 替代掉路由和具体的服务名
+spring:
+  application:
+    name: MICROSERVICE-ZUUL # 显示在服务注册中心的名字
+  profiles: dev # 默认使用环境
+---
+server:
+  port: 9527 # 服务提供者提供服务的端口
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+zuul:
+  ignored-services: '*' # 忽略所有的服务，意思除了通过使用路由方式，直接调用服务的方式将被无视
+  prefix: '/aigou' # 前缀，统一一个项目的路径，更规范
+  routes:
+    xl.serviceId: brand-provider
+    xl.path: /brand/**  # 替代掉路由和具体的服务名
+spring:
+  application:
+    name: MICROSERVICE-ZUUL # 显示在服务注册中心的名字
+  profiles: test # 测试环境
