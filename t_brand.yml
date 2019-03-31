@@ -15,7 +15,7 @@ spring:
     name: BRAND-PROVIDER # 服务名，注意大写，中间一定不能有"下划线"
   profiles: dev # 默认环境
 mybatis-plus:
-  type-aliases-package: aigou.domain #别名
+  type-aliases-package: aigou.domain,aigou.query #别名
 eureka:
   client:
     service-url:
