@@ -13,7 +13,7 @@ spring:
     password: 123456
   application:
     name: PRODUCTTYPE-PROVIDER # 服务名，注意大写，中间一定不能有"下划线"
-  profiles: dev # 默认环境
+  profiles: dev #默认环境
 mybatis-plus:
   mapper-locations: classpath:aigou/mapper/*Mapper.xml
   type-aliases-package: aigou.domain #别名
