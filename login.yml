@@ -7,7 +7,7 @@ server:
   port: 8002
 spring:
   application:
-    name: LOGIN-PROVIDERs
+    name: LOGIN-PROVIDER
   profiles: dev # 默认环境
 eureka:
   client:
@@ -18,7 +18,7 @@ server:
   port: 8002
 spring:
   application:
-    name: LOGIN-PROVIDERs
+    name: LOGIN-PROVIDER
   profiles: test # 默认环境
 eureka:
   client:
