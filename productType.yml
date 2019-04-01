@@ -21,6 +21,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/ # Eureka 服务注册中心的服务地址
+feign:
+  hystrix:
+    enabled: true
 ---
 server:
   port: 8003 # 服务提供者提供服务的端口
@@ -40,3 +43,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/ # Eureka 服务注册中心的服务地址
+feign:
+  hystrix:
+    enabled: true
