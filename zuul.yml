@@ -13,8 +13,10 @@ zuul:
   ignored-services: '*' # 忽略所有的服务，意思除了通过使用路由方式，直接调用服务的方式将被无视
   prefix: '/aigou' # 前缀，统一一个项目的路径，更规范
   routes:
-    xl.serviceId: brand-provider
-    xl.path: /brand/**  # 替代掉路由和具体的服务名
+    brand.serviceId: brand-provider
+    brand.path: /brand/**  # 替代掉路由和具体的服务名
+    login.serviceId: login-provider
+    login.path: /login/**  # 替代掉路由和具体的服务名
 spring:
   application:
     name: MICROSERVICE-ZUUL # 显示在服务注册中心的名字
