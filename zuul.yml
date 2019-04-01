@@ -16,7 +16,7 @@ zuul:
     brand.serviceId: brand-provider
     brand.path: /brand/**  # 替代掉路由和具体的服务名
     login.serviceId: login-provider
-    login.path: /login/**  # 替代掉路由和具体的服务名
+    login.path: /login/**  #  替代掉路由和具体的服务名
 spring:
   application:
     name: MICROSERVICE-ZUUL # 显示在服务注册中心的名字
